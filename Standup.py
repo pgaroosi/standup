@@ -9,7 +9,7 @@ pygame.init()
 timer = pygame.time.Clock()
 
 # Set reminder interval to 30 minutes
-reminder_interval = 30 * 60  # Convert to seconds
+reminder_interval = 30 * 60  # Seconds
 
 # Set up the sound
 stand_up_sound = pygame.mixer.Sound("stand_up_sound.mp3")
@@ -35,8 +35,6 @@ def show_popup():
     # Start the main event loop
     root.mainloop()
 
-
-
 while True:
     # Set the current time as the start time
     start_time = time.time()
@@ -52,7 +50,7 @@ while True:
         # Wait for a short period to avoid CPU overload
         time.sleep(0.1)
 
-    # Play the reminder sound
+    # Play the reminder sound and show notification
     stand_up_sound.play()
     show_popup()
 
